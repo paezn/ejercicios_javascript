@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de datos en JS</title>
+</head>
+<body>
+    <h1>Tipos de datos en JS</h1>
+    <script>
+        //Tipos de datos
+        //undefined: a la variable no se le ha asignado ningún valor
+        //Null: para valores desconocidos
+        //Boolean: datos lógicos que pueden tener dos valores: true y false
+        //Number: datos numéricos enteros y de coma flotante
+        //String: Se usa para cadenas de texto
+        //Symbol: datos unicos e inmutables
+        //BigInt: numeros enteros de longitud arbitraria
+        //Object: se usa para estructuras de datos mas complejos.
+
+        let dato;
+        console.log(dato);
+        document.write(dato);
+
+        let a = null;
+        document.write("<br>Resultado: " + (a+10));
+        let b;
+        document.write("<br>Resultado: " + (b+10));
+
+        let estoy_contento;
+        estoy_contento = false;
+        estoy_contento = true;
+
+        let numero_entero = 100;
+        let numero_decimal = 3.1415;
+
+        let simples = 'comillas simples';
+        let dobles = "comillas dobles";
+        document.write("<br>Qué quiere decir la palabra 'Axiomático'");
+        document.write('<br>Pulse la tecla "ahora"');
+
+        //Caracteres especiales
+        let cadena1 = "String normal sin caracteres especiales";
+        let cadena2 = "\n\nEsto es un String \nde texto que si utiliza \ncaracteres especiales";
+        let cadena3 = "\n\251 Nestor \xA9 Colegio Guanenta";
+        let cadena4 = "\n\u00AE by \"paezn\" 2022";
+        alert(cadena1 + cadena2 + cadena3 + cadena4);
+
+        //Conversion tipos de datos
+        let var1 = "50";
+        let var2 = 10;
+        let  resultado_uno = var1 + var2;
+        let resultado_dos = var1 - var2;
+        alert("Conversion variable numérica a String. \nEl resultado es " + resultado_uno);
+        alert("Conversion variable String a numérica. \nEl resultado es " + resultado_dos);
+
+        //Localización de las variables
+        let cuenta = 4; //Variable global
+        if(cuenta>3)
+        {
+            let saludo = "Hola Sistemicos 11"; //Variable local
+            console.log(saludo);
+        }
+        console.log(saludo); //Error: saludo no está definido
+    </script>
+</body>
+</html>
